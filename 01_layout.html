@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>안녕하세요 [ 박형민 ]입니다</title>
+    <title>안녕하세요 [박형민]입니다</title>
     <!-- favicon -->
     <!-- https://realfavicongenerator.net/ -->
     <link
@@ -22,10 +22,10 @@
     <link rel="manifest" href="/./site.webmanifest" />
     <!-- og tag -->
     <!-- https://ogp.me/ -->
-    <meta property="og:title" content="백엔드 개발자 [ 박형박 ]을 소개합니다!" />
+    <meta property="og:title" content="백엔드 개발자 [박형민]을 소개합니다!" />
     <meta
       property="og:description"
-      content="꾸준히 성장하는 백엔드 개발자 [엄형민] 의 포트폴리오입니다. 안정적인 시스템과 더 나은 사용자 가치를 만들기 위한 열정과 고민을 담았습니다."
+      content="꾸준히 성장하는 백엔드 개발자 [엄형민]의 포트폴리오입니다. 안정적인 시스템과 더 나은 사용자 가치를 만들기 위한 열정과 고민을 담았습니다."
     />
     <meta property="og:image" content="" />
     <style>
@@ -125,6 +125,7 @@
 
       .title {
         font-family: "Paperozi";
+        color: #3b0270;
       }
 
       /* 기본 전체 설정 */
@@ -135,23 +136,159 @@
 
       body {
         margin: 0; /* 기본 마진 */
+        background-color: #fff1f1;
+        color: #e9b3fb;
       }
 
-      /* 색상 설정 */
+      /*
+        색상 설정
+        - https://www.bairesdev.com/tools/ai-colors
+        - https://2colors.colorion.co/
+        - https://colorhunt.co/
+        - https://mobilepalette.colorion.co/
+      */
+
+      /*
+      https://colorhunt.co/palette/3b02706f00ffe9b3fbfff1f1
+      - 전체 배경색 : #FFF1F1
+      - 박스색 : #6F00FF
+      - 강조색 : #3B0270
+      - 글자색 : #E9B3FB
+      */
+
+      .box {
+        background-color: #6f00ff;
+        padding: 24px;
+        border-radius: 12px; /* 0~50% or 12px*/
+      }
 
       /* 레이아웃 : 박스모델, 플렉스 */
+      body > section {
+        /* body에 바로 속한 section */
+        /* 자식 선택 -> 바로 속한 경우 */
+        /* https://getbootstrap.com/docs/5.3/layout/breakpoints/#available-breakpoints */
+        padding: 24px;
+        max-width: 576px;
+        margin: auto;
+        
+      }
+      
+      #intro .title {
+        text-align: center;
+      }
+
+      #intro div {
+        line-height: 1.6;
+        /* 1 : 100%  */
+      }
+      #tech-stack h2 {
+        margin-top: 0;  /* top, left, right, bottom */
+      }
+      #tech-stack ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        justify-content: space-around;
+        margin: 0;
+        padding: 0;
+      }
+      
+      #tech-stack li {
+        list-style: none;
+        width: 128px;
+        aspect-ratio: 1; /* 가로 세로 */
+        background-color: #3b0270;
+        border-radius: 8px;
+        border: 1px transparent solid;
+        padding: 4px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #tech-stack img {
+        width: 90%;
+        background-color: white;
+        border-radius: 50%;
+      }
+
+      #portfoilio .box {
+        display: flex;
+        flex-direction: column;
+        gap: 24px; 
+
+      }
+
+      #portfoilio .item {
+        background-color: #3b0270;
+        width: 100%;
+        height: 160px;
+        border-radius: 8px;
+        border: 1px #fff1f1 solid;
+        padding: 0 16px;
+      }
     </style>
   </head>
   <body>
-    <h1 class="title">반갑습니다, 성장하는 백엔드 개발자 [ 박달민]입니다</h1>
-    <p>
-      사용자에게 더 나은 가치를 제공하기 위해, 안정적이고 확장 가능한 시스템을
-      구축하는 데 깊은 흥미를 느낍니다. 새로운 기술을 배우고 적용하며 꾸준히
-      성장하는 개발자가 되겠습니다.
-    </p>
+    <section id="intro">
+      <h1 class="title">
+        반갑습니다!<br />
+        성장하는 백엔드 개발자<br />
+        [박개발]입니다
+      </h1>
+      <section class="box">
+        <br>
+          사용자에게 더 나은 가치를 제공하기 위해<br />
+          <strong>안정적이고 확장 가능한 시스템을 구축하는 데</strong> <br />
+          깊은 흥미를 느낍니다. 새로운 기술을 배우고 적용하며 꾸준히 성장하는
+          개발자가 되겠습니다.
+        </div>
+      </section>
+    </section>
+
     <!-- flex 기반 레이아웃. svg repo. -->
     <!-- 기술 스택 (부트캠프) -->
-
+    <!-- https://www.svgrepo.com/ -->
+    <section id ="tech-stack">
+      <section class="box">
+        <h2>💻 기술 스택</h2>
+        <ul>
+          <li>
+            <img src="icons/java.png" alt="JAVA" />
+          </li>
+          <li>
+            <img src="icons/spring.png" alt="SPRING" />
+          </li>
+          <li>
+            <img src="icons/mysql.png" alt="MYSQL" />
+          </li>
+          <li>
+            <img src="icons/aws.png" alt="AWS" />
+          </li>
+          <li>
+            <img src="icons/github.png" alt="github" />
+          </li>
+        </ul>
+      </section>
+    </section>
     <!-- 포트폴리오 (3종) -->
+     <section id="portfoilio">
+      <section class="box">
+      <h2> 💡 포트폴리오@!</h2>
+      <div class="item">
+        <h3>여행 추천 프로젝트</h3>
+        <p> Spring Boot 기반의 여행 추천 웹 애플리케이션 개발. 사용자 맞춤형 여행
+          경로 및 관광지 추천 기능 구현.</p>
+      </div>
+      <div class="item">
+        <h3>재능 매칭 프로젝트</h3>
+        <p>React 및 Spring Boot를 활용한 재능 매칭 플랫폼 구축.</p>
+      </div>
+      <div class="item">
+        <h3>AWS 인프라 프로젝트</h3>
+        <p>AWS 인프라 구축 및 CI/CD 환경 구성</p>
+      </div>
+     </section>
+    </section>
   </body>
 </html>
